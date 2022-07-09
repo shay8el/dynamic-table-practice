@@ -9,7 +9,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 background-color: white;
 padding-bottom: 30px;
 transition: 0.3s;
-${({ loading }) => loading && `
+${({ loading }) => (loading === 'true') && `
 filter:blur(3px);
 transition: 0.3s;
 `}
@@ -63,7 +63,7 @@ const EndpointTable = ({data}) => {
     const { scheme, filteredResults, gridTemplate, isLoading } = useContext(EndpointMethodContext);
 
     return (
-      <TableContainer loading={isLoading}>
+      <TableContainer loading={isLoading.toString()}>
          <TableHeader />
          { filteredResults.length > 0 ? filteredResults.map(([section, rows], sectionIndex) =>
             (

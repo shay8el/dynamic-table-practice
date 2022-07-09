@@ -76,7 +76,7 @@ const SearchBar = () => {
 
   const onResetFilters = () => {
     setFilteredResults(initialData)
-    resetSearchQuery()
+    resetSearchQuery(true)
   }
 
   return (

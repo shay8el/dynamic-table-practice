@@ -1,17 +1,10 @@
 import EndpointTable from './EndpointTable';
 import { useState } from 'react';
 import { EndpointMethodContext } from './EndpointMethodContext';
-import styled from 'styled-components';
 import SearchBar from './SearchBar'
 import {scheme} from './TableScheme'
 
 const INITIAL_SEARCH_STATE = {text: '', filters: { showPPIOnly: false }}
-
-const BlurredTable = styled.div`
-position: absolute;
-padding-bottom: 0;
-background-color: red;
-`
 
 const EndpointStructure = ({data}) => {
     // we convert our data to list in order to make the data easier to work with (build, search, etc...)
@@ -26,8 +19,8 @@ const EndpointStructure = ({data}) => {
         });
     }
     
-    const resetSearchQuery = () => {
-        setSearchParams(INITIAL_SEARCH_STATE)
+    const resetSearchQuery = (resetFilters = false) => {
+        setSearchParams((prev)=>({...INITIAL_SEARCH_STATE, lastSearched: resetFilters ? '' : prev.text}))
         setIsLoading(false)
     }
 
