@@ -1,3 +1,4 @@
+<img width="1263" alt="image" src="https://user-images.githubusercontent.com/44734542/178123863-10208077-9178-4f2f-81aa-0da0bf3e0e1c.png">
 
 In the project directory, you can run:
 
