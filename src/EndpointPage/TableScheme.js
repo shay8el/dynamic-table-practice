@@ -1,6 +1,6 @@
 import TextCell from './TextCell'
+import TagCell from './TagCell'
 import ToggleCell from './ToggleCell'
-import Tag from '../Components/Tag'
 
 export const scheme = [
     { 
@@ -24,7 +24,7 @@ export const scheme = [
     { 
         headerTitle: 'Type',
         columnSize: 2,
-        columnCellElement: Tag,
+        columnCellElement: TagCell,
         dataKey: 'type'
     }
 ]

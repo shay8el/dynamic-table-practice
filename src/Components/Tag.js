@@ -9,6 +9,6 @@ width: fit-content;
 height: fit-content;
 `;
 
-const Tag = ({value}) => <TagContainer>{value}</TagContainer>
+const Tag = ({children}) => <TagContainer>{children}</TagContainer>
 
 export default Tag;

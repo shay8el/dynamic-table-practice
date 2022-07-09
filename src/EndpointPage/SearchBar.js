@@ -63,7 +63,7 @@ const SearchBar = () => {
     const textToSearch = searchParams.text
     const searchResult = []
     initialData.forEach(([section, rows]) => {
-    const rowsFilterd = rows.filter((row) => row.name.indexOf(textToSearch) > -1).filter((row) => {
+    const rowsFilterd = rows.filter((row) => (row.name.indexOf(textToSearch) > -1)||row.type.indexOf(textToSearch) > -1).filter((row) => {
       const shouldFilterPPI = searchParams.filters.showPPIOnly
       return (!shouldFilterPPI) || (shouldFilterPPI && row.pii)
     })
