@@ -9,20 +9,18 @@ transition: 0.5s;
 width: fit-content;
 height: fit-content;
 padding: 5px;
-${({ color }) => {
+${({ active, color }) => {
     const toggleColor = color === 'secondary' ? colors.darkBlue : colors.purple2
-    return (`
+    const defaultState = (`
     color: ${toggleColor};
     border: 2px ${toggleColor} solid;
     `)
-}}
-${({ active, color }) => {
-    const toggleColor = color === 'secondary' ? colors.darkBlue : colors.purple2
-    return active && `
+    const activeState = (active && `
     background-color: ${toggleColor};
     color: white;
     transition: 0.5s;
-    `
+    `)
+    return defaultState + activeState
 }}
 `;
 
