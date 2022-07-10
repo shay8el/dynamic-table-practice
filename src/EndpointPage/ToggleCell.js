@@ -10,8 +10,9 @@ const ToggleCell = ({value, location}) => {
     clone[sectionIndex][1][sectionRowIndex][dataKey] = !(clone[sectionIndex][1][sectionRowIndex][dataKey])
     setFilteredResults(clone)
   }
+  const toggleColor = dataKey === 'masked' ? 'primary' : 'secondary' 
   return (
-    <Toggle active={value} onClick={handleToggleChange}>
+    <Toggle color={toggleColor} active={value} onClick={handleToggleChange}>
       {dataKey}
     </Toggle>
   );

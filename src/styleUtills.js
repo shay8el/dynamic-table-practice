@@ -8,7 +8,8 @@ export const colors = {
     gray: '#676767',
     darkGray: '#2a2a2a',
     tagBackground: '#cee5ed',
-    tagText: '#449db9'
+    tagText: '#449db9',
+    darkBlue: '#1d3273'
 };
 
 export const tabHeight = '38px';
